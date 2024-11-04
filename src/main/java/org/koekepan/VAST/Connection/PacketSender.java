@@ -114,6 +114,10 @@ public class PacketSender implements Runnable { // This is the packet sender, it
     }
 
     public void addServerboundPacket(Packet packet) {
+
+        // Print the byte size of packet
+
+
         PacketWrapper packetWrapper = new PacketWrapper(packet);
         packetWrapper.clientBound = false;
         packetWrapperMap.put(packet, packetWrapper);

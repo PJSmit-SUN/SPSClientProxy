@@ -27,7 +27,7 @@ public class EstablishConnectionPacketBehaviour implements Behaviour<Packet> {
             if(establishConnectionPacket.establishConnection() && !clientInstance.isJoined()) {
                 spsPacket.x = App.gateWayServer_xPosition;
                 spsPacket.y = App.gateWayServer_yPosition;
-                spsPacket.radius = 10; // A bit arbitrary, but also for migration might be beneficial to have a larger radius
+                spsPacket.radius = 0; // A bit arbitrary, but also for migration might be beneficial to have a larger radius
             }
         }
 		try {

@@ -308,12 +308,15 @@ public class VastConnection {
 
     public void publish(SPSPacket packet) { // sends to vast matcher as client
 
-//        System.out.println("Connection <"+uuid+"> sent packet <"+packet.packet.getClass().getSimpleName()+"> on channel <"+packet.channel+"> at x: <"+packet.x+"> y: <"+packet.y+"> radius: <"+packet.radius+">");
+        System.out.println("Connection <"+uuid+"> sent packet <"+packet.packet.getClass().getSimpleName()+"> on channel <"+packet.channel+"> at x: <"+packet.x+"> y: <"+packet.y+"> radius: <"+packet.radius+">");
 
         //convert to JSON
         Gson gson = new Gson();
         byte[] payload = packetToBytes(packet.packet);
-        String json = gson.toJson(payload); // TODO: this is extremely inefficient, should be changed
+
+        System.out.println("Payload: " + payload);
+
+//        String json = gson.toJson(payload); // TODO: this is extremely inefficient, should be changed
 
         // Print memory size of json
 
